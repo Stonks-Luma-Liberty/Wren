@@ -11,8 +11,8 @@ env_logger = "0.9.0"
 envy = "0.4.2"
 futures = "0.3.21"
 log = "0.4.17"
-reqwest = { version = "0.11.11", features = ["json", "blocking"] }
+reqwest = { version = "0.11.11", features = ["json"] }
 serde = { version = "1.0.138", features = ["derive"] }
 tokio = { version = "1.19.2", features = ["rt-multi-thread", "macros"] }
-twitter-v2 = "0.1.6"
+twitter-v2 = { version = "0.1.6"}
 
