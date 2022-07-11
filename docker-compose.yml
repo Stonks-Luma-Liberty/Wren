@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+
+  wren_bot:
+    build: .
+    restart: unless-stopped
+    command: ./wren
+    volumes:
+      - .:/wren_bot
