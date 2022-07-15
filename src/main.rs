@@ -1,17 +1,13 @@
+mod config;
+
+use crate::config::Config;
 use dotenv::dotenv;
 use futures::stream::TryStreamExt;
 use log::info;
 use reqwest::Client;
-use serde::Deserialize;
 use std::{collections::HashMap, error::Error};
 use tokio::time::{sleep, Duration};
 use twitter_v2::{authorization::BearerToken, Tweet, TwitterApi};
-
-#[derive(Deserialize, Debug)]
-struct Config {
-    bearer_token: String,
-    discord_webhook_url: String,
-}
 
 /// It takes a tweet, and posts it to a discord webhook.
 ///
